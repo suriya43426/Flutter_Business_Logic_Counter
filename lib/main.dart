@@ -31,6 +31,11 @@ class _MyHomePageState extends State<MyHomePage> {
       _counter++;
     });
   }
+  void _resetCounter() {
+    setState(() {
+      _counter = 0;
+    });
+  }
 
 
   @override
@@ -64,9 +69,9 @@ class _MyHomePageState extends State<MyHomePage> {
           SizedBox(height: 12,
           ),
           FloatingActionButton(
-            onPressed: _incrementCounter,
-            tooltip: 'Increment',
-            child: Icon(Icons.add),
+            onPressed: _resetCounter,
+            tooltip: 'reset',
+            child: Icon(Icons.restore),
           ),
         ],
       ),
